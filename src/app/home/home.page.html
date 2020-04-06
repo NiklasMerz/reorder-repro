@@ -23,7 +23,7 @@
     <ion-reorder-group (ionItemReorder)="doReorder($event)" disabled="false">
       <!-- <app-message *ngFor="let message of getMessages()" [message]="message"></app-message> -->
 
-      <ion-item *ngFor="let message of getMessages()" [routerLink]="'/message/' + message.id" [detail]="false">
+      <ion-item *ngFor="let message of messages" (click)="edit(message)" [detail]="false">
         <div slot="start" [class]="!message.read ? 'dot dot-unread' : 'dot'"></div>
         <ion-label class="ion-text-wrap">
           <h2>
