@@ -24,8 +24,8 @@ export class HomePage {
     // The `from` and `to` properties contain the index of the item
     // when the drag started and ended, respectively
     console.log('Dragged from index', ev.detail.from, 'to', ev.detail.to);
-    //const message = this.messages.splice(ev.detail.from, 1)[0];
-    //this.messages.splice(ev.detail.to, 0, message);
+    const message = this.messages.splice(ev.detail.from, 1)[0];
+    this.messages.splice(ev.detail.to, 0, message);
 
     // Finish the reorder and position the item in the DOM based on
     // where the gesture ended. This method can also be called directly
