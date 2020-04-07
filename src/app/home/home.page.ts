@@ -44,6 +44,8 @@ export class HomePage {
     const index = this.messages.findIndex((elem) => elem.id === newMessage.id);
     console.debug(index);
     this.messages[index] = newMessage;
+
+    console.debug(this.messages);
   }
 
 }
