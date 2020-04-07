@@ -43,7 +43,6 @@ export class HomePage {
     };
     const index = this.messages.findIndex((elem) => elem.id === message.id);
     console.debug(index);
-    this.messages[index] = newMessage;
 
     for (const prop in newMessage) {
       if (this.messages[index].hasOwnProperty(prop)) {
